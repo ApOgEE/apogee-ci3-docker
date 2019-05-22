@@ -4,16 +4,16 @@ version: '3'
 
 services:
   mysqldb:
-    image: mysql:8.0
+    image: mysql:5.6
     environment:
-      - MYSQL_ROOT_PASSWORD=IniPasswordMySQL8Root
+      - MYSQL_ROOT_PASSWORD=MysqlRoot
     ports:
       - 3306:3306
     volumes:
       - "./dbdata:/var/lib/mysql"
 
   phpweb:
-    image: php:7.3-apache-stretch
+    build: './php-apache/'
     volumes:
       - "./apogee-phpci3:/var/www/html/"
     ports:
