@@ -1,0 +1,8 @@
+# apogee ci3 docker project
+
+# persistent database folder
+dbdata 
+
+# ci3 source folder can be pulled from other git
+# or initialize using composer
+apogee-phpci3

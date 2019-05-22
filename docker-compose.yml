@@ -1,0 +1,23 @@
+# apogee docker-compose.yml
+
+version: '3'
+
+services:
+  mysqldb:
+    image: mysql:8.0
+    environment:
+      - MYSQL_ROOT_PASSWORD=IniPasswordMySQL8Root
+    ports:
+      - 3306:3306
+    volumes:
+      - "./dbdata:/var/lib/mysql"
+
+  phpweb:
+    image: php:7.3-apache-stretch
+    volumes:
+      - "./apogee-phpci3:/var/www/html/"
+    ports:
+      - 80:80
+    depends_on:
+      - mysqldb
+
