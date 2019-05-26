@@ -6,3 +6,4 @@ dbdata
 # ci3 source folder can be pulled from other git
 # or initialize using composer
 apogee-phpci3
+sqldump
