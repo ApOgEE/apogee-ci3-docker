@@ -30,3 +30,16 @@ SELECT distinct a.refer_id, a.person_id, a.agent_no FROM agents a, agents b WHER
 SELECT a.agent_id, a.person_id, p.name, p.ic FROM agents a INNER JOIN persons p ON p.person_id = a.person_id  WHERE a.agent_no = 0;
 
 ```
+
+## Nota MySQL Command Line
+
+Untuk create database.
+Create user.
+
+```
+CREATE DATABASE apogeek;
+GRANT ALL PRIVILEGES ON apogeek.* TO 'apogee' IDENTIFIED BY 'mypassword';
+FLUSH PRIVILEGES;
+```
+
+
